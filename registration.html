@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <form action="#" id="form-validation">
+      <div class="username">
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Username"
+        />
+        <label for="username"></label>
+      </div>
+      <p class="error-text" id="error-username"></p>
+      <div class="email">
+        <input type="email" name="email" id="email" placeholder="Email" />
+        <label for="email"></label>
+      </div>
+      <p id="error-email"></p>
+      <div class="input-box">
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+          onkeyup="return passCheck()"
+        />
+        <label for="password"></label>
+        <img
+          class="eye-close"
+          id="eye-close"
+          src="img/eye-close.png"
+          alt="eye-close"
+        />
+      </div>
+      <p class="error-text" id="error-password1"></p>
+      <div class="input-box">
+        <input
+          type="password"
+          name="password"
+          id="password2"
+          placeholder="Repeat Password"
+          oninput="return conform()"
+        />
+        <label for="password2"></label>
+        <img
+          class="eye-close"
+          id="eye-close2"
+          src="img/eye-close.png"
+          alt="eye-close"
+        />
+      </div>
+      <p class="error-text" id="error-password2"></p>
+      <div class="check">
+        <span id="check"> 8 characters,</span>
+        <span id="check1">1 lower case character,</span>
+        <span id="check2">1 upper case character,</span>
+        <span id="check3">1 numerical character,</span>
+        <span id="check4">1 special character. </span>
+      </div>
+      <div>
+        <input type="radio" name="radio" id="radio" />
+        <label class="radio1" for="radio">male</label>
+        <input type="radio" name="radio" id="radio2" />
+        <label class="radio2" for="radio2">female</label>
+      </div>
+      <p class="error-text" id="error-radio"></p>
+      <div>
+        <input type="radio" name="radio" id="radio-agree" />
+        <label class="agree" for="radio-agree">I agree</label>
+      </div>
+      <p class="error-text" id="error-agree"></p>
+      <div>
+        <button id="submit">Registration</button>
+      </div>
+    </form>
+
+    <script src="js/registration.js"></script>
+  </body>
+</html>
